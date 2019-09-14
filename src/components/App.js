@@ -219,36 +219,8 @@ const App = () => {
         <div className="tabs">
           <div id="tab1" className="tab">
             <ul className="nav nav-tabs">
-              <li className="active"><a href="#tab1">All Jobs</a></li>
-              <li><a href="#tab2">Expiring Jobs</a></li>
-            </ul>
-            {/* Rendering All Jobs Page number */}
-            <div className="container">
-              <ul id="page-numbers">
-                <span id={currentPagination - 5} className={`pagination ${disableClass}`} onClick={handleClickPrevNext}>&laquo; Previous</span>
-                {renderPageNumbers}
-                <span id={currentPagination + 5} className="pagination" onClick={handleClickPrevNext}>&raquo; Next</span>
-              </ul>
-            </div>
-            {/* Rendering the all jobs */}
-            <div className="jobs">
-              {loading && !errorMessage ? (
-                <img className="spinner" src={spinner} alt="Loading spinner" />
-              ) : errorMessage ? (
-                <div className="errorMessage">{errorMessage}</div>
-              ) : (
-                currentItem.length > 0 ? 
-                  currentItem.map((job, index) => (
-                    <Job key={`${index}-${job._id}`} job={job} />
-                  ))
-                : <div className="errorMessage">No Jobs Found</div>
-              )}
-            </div>           
-          </div>
-          <div id="tab2" className="tab">
-            <ul className="nav nav-tabs">
-              <li><a href="#tab1">All Jobs</a></li>
-              <li className="active"><a href="#tab2">Expiring Jobs</a></li>
+              <li className="active"><a href="#tab1">Expiring Jobs</a></li>
+              <li><a href="#tab2">All Jobs</a></li>
             </ul>
             {/* Rendering expiring Jobs Page number */}
             <div className="container">
@@ -271,6 +243,35 @@ const App = () => {
                   ))
                 : <div className="errorMessage">No Jobs Found</div>
               )}
+            </div>           
+          </div>
+          <div id="tab2" className="tab">
+            <ul className="nav nav-tabs">
+              <li><a href="#tab1">Expiring Jobs</a></li>
+              <li className="active"><a href="#tab2">All Jobs</a></li>
+            </ul>
+            {/* Rendering All Jobs Page number */}
+            <div className="container">
+              <ul id="page-numbers">
+                <span id={currentPagination - 5} className={`pagination ${disableClass}`} onClick={handleClickPrevNext}>&laquo; Previous</span>
+                {renderPageNumbers}
+                <span id={currentPagination + 5} className="pagination" onClick={handleClickPrevNext}>&raquo; Next</span>
+              </ul>
+            </div>
+            {/* Rendering the all jobs */}
+            <div className="jobs">
+              {loading && !errorMessage ? (
+                <img className="spinner" src={spinner} alt="Loading spinner" />
+              ) : errorMessage ? (
+                <div className="errorMessage">{errorMessage}</div>
+              ) : (
+                currentItem.length > 0 ? 
+                  currentItem.map((job, index) => (
+                    <Job key={`${index}-${job._id}`} job={job} />
+                  ))
+                : <div className="errorMessage">No Jobs Found</div>
+              )}
+            
             </div>
           </div>         
         </div>

@@ -37,3 +37,8 @@ The app can be deployed using either heroku or any other platform (AWS)
 # Built With
 - Javascript
 - React - (UI library)
+
+# Note
+For expiring jobs, there are no end dates which is nearer or approximate to the current date. So i have used the data which has end date and ignored the data which does not contain end date.
+
+Since i am a beginner in testing and learning the testing the react apps i have not added the test metrics to it.

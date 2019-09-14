@@ -1,0 +1,121 @@
+.App {
+  text-align: center;
+}
+
+.App-header {
+  background-color: #813488;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  /* padding: 20px; */
+  cursor: pointer;
+  margin-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+.spinner {
+  height: 80px;
+  margin: auto;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+/* new css for movie component */
+
+* {
+  box-sizing: border-box;
+}
+
+.errorMessage {
+  margin: auto;
+  font-weight: bold;
+  color: rgb(161, 15, 15);
+}
+
+.jobs{
+  background: #e2e1e0;
+  text-align: center;
+  margin-top: 20px;
+}
+.job-card{
+  background: #fff;
+  display: inline-block;
+  margin: 1rem;
+  position: relative;
+  width: 250px;
+}
+.job{
+  box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+  /* box-shadow: 0 8px 6px -6px #868282; */
+  padding: 30px;
+  border-radius: 5px;
+}
+.job:hover {
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.crop{
+  width:auto;
+  overflow:hidden;
+  height:40px;
+}
+.black-color{
+  color: #000;
+}
+
+#page-numbers {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+.pagination {
+  margin-top: 25px;
+  position: relative;
+  float: left;
+  padding: 6px 12px;
+  margin-left: -1px;
+  line-height: 1.42857143;
+  color: #337ab7;
+  text-decoration: none;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  cursor: pointer;
+}
+.disabled{
+  opacity: 0.65; 
+  cursor: not-allowed;
+  pointer-events: none;
+}
+.active{
+  background-color: #337ab7;
+  color: #fff;
+}
+.sort{
+  margin: 20px;
+}
+.form-group.sort button{
+  margin: 10px;
+}
+
+.tab:not(:target) {
+  display: none;
+}
+
+.tab:last-child {
+  display: block;
+}
+
+.tab:target ~ .tab:last-child {
+  display: none;
+}
+
+.tabs {
+ 
+}
+
